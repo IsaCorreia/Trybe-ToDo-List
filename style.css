@@ -1,3 +1,16 @@
 body {
-  border: red solid 1px;
+  font-family: Helvetica;
+  background-color: slategray;
+}
+
+div {
+  background-color: silver;
+  padding: 10px 20px;
+  width: 80%;
+  margin: auto;
+}
+
+header {
+  font-size: 24px;
+  font-weight: 600;
 }
