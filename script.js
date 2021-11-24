@@ -52,3 +52,8 @@ function checkTask (event) {
     }
 }
 addEventListener('dblclick', checkTask);
+
+function clearAll() {
+    const list = document.getElementById('lista-tarefas');
+    list.innerHTML='';
+}
