@@ -57,3 +57,18 @@ function clearAll() {
     const list = document.getElementById('lista-tarefas');
     list.innerHTML='';
 }
+
+function clearCompleted() {
+    const list = document.getElementById('lista-tarefas').children;
+
+    while (document.getElementsByClassName('completed').length !== 0) {
+        // Percorre a lista, retornando o elemento filho em si
+        for (let item of list) {
+            // Se o elemento filho tiver a classe completed
+            if (item.classList.contains('completed') === true) {
+                // remove o elemento
+                item.remove();
+            }
+        }
+    }
+}
