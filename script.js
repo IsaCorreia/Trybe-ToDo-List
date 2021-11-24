@@ -27,10 +27,28 @@ function selectedTask (event){
             oldItem.style.backgroundColor = 'white';
         } else {
 
-            // Caso não tiver selected, adiciona a classe
+            // Caso não tiver nenhum selected, adiciona a classe
             newItem.classList.add('selected'); 
             newItem.style.backgroundColor = 'rgb(128, 128, 128)';
         }
     }
 }
 addEventListener('click', selectedTask);
+
+function checkTask (event) {
+    const task = event.target;
+    // Filtra evento de clique somente para os itens da lista
+    if (task.classList.contains('item') === true) {
+        // Se o item NÃO contém a classe "completed"
+        if (task.classList.contains('completed') === false) {
+            // Adiciona a classe ao item
+            task.classList.add('completed');
+
+        // Se o item CONTÉM a classe "completed"
+        } else if (task.classList.contains('completed') === true) {
+            // Remove a classe do item
+            task.classList.remove('completed');
+        }
+    }
+}
+addEventListener('dblclick', checkTask);
