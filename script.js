@@ -21,7 +21,7 @@ function selectedTask(event) {
   const allSelected = document.querySelectorAll('.selected');
 
   if (newItem.classList.contains('item') === true) {
-    if (allSelected.length === 1 && newItem.classList.contains('selected') == false) {
+    if (allSelected.length === 1 && newItem.classList.contains('selected') === false) {
       newItem.classList.add('selected');
       oldItem.classList.remove('selected');
       newItem.style.backgroundColor = 'rgb(128, 128, 128)';
@@ -72,3 +72,18 @@ function clearCompleted() {
     removeElements();
   }
 }
+
+// 
+function saveList() {
+  const lista = document.getElementById('lista-tarefas');
+  console.log(lista);
+  localStorage.setItem('listaSalva', lista.innerHTML);
+}
+
+function loadList() {
+  if (localStorage.getItem('listaSalva')){
+    const lista = document.getElementById('lista-tarefas');
+    lista.innerHTML = localStorage.getItem('listaSalva');
+  }
+}
+window.onload = loadList;
