@@ -73,13 +73,19 @@ function clearCompleted() {
   }
 }
 
-// 
+function clearSelected() {
+  document.querySelector('.selected').remove();
+
+}
+
+// Salva o innerHTML da lista-tarefas no localStorage
 function saveList() {
   const lista = document.getElementById('lista-tarefas');
-  console.log(lista);
   localStorage.setItem('listaSalva', lista.innerHTML);
 }
 
+// Verifica se há listaSalva no localStorage, recupera a string
+// e insere em innetHTML de lista-tarefas
 function loadList() {
   if (localStorage.getItem('listaSalva')){
     const lista = document.getElementById('lista-tarefas');
