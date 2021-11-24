@@ -21,7 +21,7 @@ function selectedTask(event) {
   const allSelected = document.querySelectorAll('.selected');
 
   if (newItem.classList.contains('item') === true) {
-    if (allSelected.length === 1 && newItem.classList.contains('selected')) {
+    if (allSelected.length === 1 && newItem.classList.contains('selected') == false) {
       newItem.classList.add('selected');
       oldItem.classList.remove('selected');
       newItem.style.backgroundColor = 'rgb(128, 128, 128)';
