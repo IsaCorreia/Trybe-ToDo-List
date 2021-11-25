@@ -25,7 +25,7 @@ function selectedTask(event) {
       newItem.classList.add('selected');
       oldItem.classList.remove('selected');
       newItem.style.backgroundColor = 'rgb(128, 128, 128)';
-      oldItem.style.backgroundColor = 'white';
+      oldItem.style.backgroundColor = 'ghostwhite';
     } else {
       newItem.classList.add('selected');
       newItem.style.backgroundColor = 'rgb(128, 128, 128)';
@@ -75,7 +75,6 @@ function clearCompleted() {
 
 function clearSelected() {
   document.querySelector('.selected').remove();
-
 }
 
 // Salva o innerHTML da lista-tarefas no localStorage

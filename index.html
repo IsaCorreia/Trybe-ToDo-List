@@ -8,21 +8,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
+    <div id="box">
         <header>Minha Lista de Tarefas</header>
 
         <main>
             <p id="funcionamento"> Clique duas vezes em um item para marcá-lo como completo </p>
 
-            <input type="text" id="texto-tarefa">
-            <button id="criar-tarefa" onclick="addTask()">Adicionar tarefa</button>
-            <button id="salvar-tarefas" onclick="saveList()">Salvar lista</button>
-            <button id="remover-selecionado" onclick="clearSelected()">Remover selecionado</button>
-            <button id="remover-finalizados" onclick="clearCompleted()">Limpar concluídos</button>
-            <button id="apaga-tudo" onclick="clearAll()">Limpar lista</button>
-            <ol id="lista-tarefas">
+            <div id="sup-bar">
+                <input type="text" id="texto-tarefa" class="bar-item">
+                <button id="criar-tarefa" onclick="addTask()" class="bar-item">Adicionar tarefa</button>
+                <button id="salvar-tarefas" onclick="saveList()" class="bar-item">Salvar lista</button>
+            </div>
 
-            </ol>
+            <ol id="lista-tarefas"></ol>
+
+            <div id="inf-bar">
+                <button id="remover-selecionado" onclick="clearSelected()" class="bar-item">Remover selecionado</button>
+                <button id="remover-finalizados" onclick="clearCompleted()" class="bar-item">Limpar concluídos</button>
+                <button id="apaga-tudo" onclick="clearAll()" class="bar-item">Limpar lista</button>
+            </div>
         </main>
     </div>
 

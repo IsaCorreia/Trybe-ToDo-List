@@ -1,14 +1,26 @@
+/*
+PALETA DE CORES:
+ciano: #00b9ae
+lilás: #7d84b2
+branco-fantasma: #fbfbff ou ghostwhite
+rosa: #ef626c
+roxo escuro: #2b2d42
+*/
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: hsl(235 , 21% , 21%);
   color: hsl(235 , 21% , 21%);
+  line-height: 25px;
+
 }
 
-div {
+#box {
   background-color: ghostwhite;
   padding: 10px 20px;
   width: 80%;
   margin: auto;
+  border-radius: 5px;
 }
 
 header {
@@ -18,4 +30,39 @@ header {
 
 .completed {
   text-decoration: line-through solid black;
+}
+
+#sup-bar , #inf-bar {
+  margin: auto;
+}
+
+.bar-item {
+  border: none;
+  padding: 5px;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+
+#texto-tarefa {
+  padding: 2px;
+  border: solid 1px hsl(232 , 26% , 59%);
+  border-radius: 5px;
+  height: 20px;
+  width: 250px;
+}
+
+button {
+  border-radius: 5px;
+  background-color: hsl(232 , 26% , 59%);
+  padding: 2px;
+}
+
+button:hover {
+  background-color: hsl(176 , 100% , 36%);
+  transition-delay: 0.2s;
+}
+
+li {
+  border-radius: 5px;
+  width: 75%;
 }
